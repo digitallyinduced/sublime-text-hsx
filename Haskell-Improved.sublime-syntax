@@ -4,6 +4,7 @@
 
 # http://www.sublimetext.com/docs/3/syntax.html
 name: Haskell Improved
+hidden: true
 file_extensions:
   - hs
   - hsc
