@@ -1,9 +1,9 @@
 %YAML 1.2
 ---
-# Thanks To: https://github.com/SublimeHaskell/SublimeHaskell
+# Thanks To: https://github.com/SublimeHaskell/SublimeHaskell/blob/master/Syntaxes/Haskell-SublimeHaskell.sublime-syntax
 
 # http://www.sublimetext.com/docs/3/syntax.html
-name: Haskell (improved)
+name: Haskell Improved
 file_extensions:
   - hs
   - hsc

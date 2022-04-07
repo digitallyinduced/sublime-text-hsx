@@ -2,6 +2,7 @@
 ---
 # See http://www.sublimetext.com/docs/syntax.html
 version: 2
+name: Haskell HSX
 file_extensions:
   - hs
 scope: source.haskell-hsx
