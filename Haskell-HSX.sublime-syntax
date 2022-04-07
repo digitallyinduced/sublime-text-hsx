@@ -1,0 +1,31 @@
+%YAML 1.2
+---
+# See http://www.sublimetext.com/docs/syntax.html
+version: 2
+file_extensions:
+  - hs
+scope: source.haskell-hsx
+contexts:
+  main:
+    - match: ""
+      push: Packages/Haskell/Haskell.sublime-syntax
+      with_prototype:
+        - match: (\[)(hsx)(\|)
+          captures:
+            1: keyword.operator.quasi-quotation.begin.haskell
+            2: entity.name.quasi-quoter.haskell
+            3: keyword.operator.quasi-quotation.begin.haskell
+          embed: hsx
+          embed_scope: scope:source.haskell.hsx
+          escape: (\|])
+          escape_captures:
+            0: keyword.operator.quasi-quotation.end.haskell
+
+  hsx:
+    - match: ""
+      push: Packages/HTML/HTML.sublime-syntax
+      with_prototype:
+        - match: \{
+          pop: true # pop ^ HTML
+          embed: Packages/Haskell/Haskell.sublime-syntax
+          escape: \}
