@@ -3,9 +3,8 @@
 # See http://www.sublimetext.com/docs/syntax.html
 version: 2
 name: Haskell HSX
-file_extensions:
-  - hs
-scope: source.haskell-hsx
+file_extensions: [hs]
+scope: source.haskell
 contexts:
   main:
     - match: ""
@@ -17,7 +16,7 @@ contexts:
             2: entity.name.quasi-quoter.haskell
             3: keyword.operator.quasi-quotation.begin.haskell
           embed: hsx
-          embed_scope: scope:source.haskell.hsx
+          embed_scope: scope:source.hsx
           escape: (\|])
           escape_captures:
             0: keyword.operator.quasi-quotation.end.haskell
@@ -27,6 +26,6 @@ contexts:
       push: Packages/HTML/HTML.sublime-syntax
       with_prototype:
         - match: \{
-          pop: true # pop ^ HTML
+          pop: true # return to HTML
           embed: Haskell-Improved.sublime-syntax
           escape: \}
